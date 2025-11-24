@@ -1,5 +1,0 @@
-The Conjuring,TC379
-Horror,Thriller
-
-Interstellar,I123
-Sci-Fi,Drama
