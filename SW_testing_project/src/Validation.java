@@ -1,6 +1,20 @@
 import java.util.Set;
 
 public class Validation {
+    public static String validateMovieTitle(String Title) {
+        if (Title == null || Title.isEmpty()){
+            return "ERROR: Movie Title {" + Title + "} is wrong";
+        }
+        
+        String[] words = Title.split("\\s+");
+        for(int i = 0; i < words.length; i++){
+            if (!Character.isUpperCase(words[i].charAt(0))){
+                return "ERROR: Movie Title {" + Title + "} is wrong";
+            }
+        }
+        return null;
+    }
+    
     public static String validateUserId(String userId, Set<String> existingIds) {
         if (userId == null || userId.isEmpty())
             return "ERROR: User ID {" + userId + "} is wrong";
